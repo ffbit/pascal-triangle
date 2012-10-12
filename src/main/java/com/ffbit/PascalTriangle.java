@@ -42,8 +42,9 @@ public class PascalTriangle {
         if (cell == 0 || cell == row) {
             return 1;
         } else {
-            return compute(cell - 1, row - 1) + compute(cell, row - 1);
+            int offset = 1;
+            return compute(cell - offset, row - offset)
+                    + compute(cell, row - offset);
         }
     }
-
 }
